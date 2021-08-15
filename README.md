@@ -25,22 +25,22 @@ The player reqruits a band of adventures and goes of adventuring on an island.
 
 
 ### What is Implemented
-[ ] Basic game objects (tiles, monsters etc)
-[ ] Create and display simple map
-[ ] Make party move around
-[ ] Character generation
-[ ] Hook up and equip party of adventures
-[ ] Monster generation and random placement
-[ ] Fight system
-[ ] ...with spells
+- [X] Basic game objects (tiles, monsters etc)
+- [X] Create and display simple map
+- [X] Make party move around
+- [ ] Character generation
+- [ ] Hook up and equip party of adventures
+- [ ] Monster generation and random placement
+- [ ] Fight system
+- [ ] ...with spells
 
 ### Personal goals
 This is an attempt to learn programming beyond simple shell scripts
-Areas I want to dig into:
-- [ ] Python logging
-- [ ] Static code analysis
-- [ ] Unit tests
-- [ ] Refactoring
-- [ ] Avoid broken windows
+Areas I aim to dig into:
+- [X] Python logging
+- [X] Static code analysis
+- [ ] Unit tests
+-  Refactoring
+-  Avoiding broken windows
 - [ ] DRY
 - [ ] Decouple code
