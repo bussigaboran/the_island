@@ -1,6 +1,16 @@
 # the_island
 ASCII-based adventure game.
 
+## Gameplay
+To install requirements:
+```
+pip install -r requirements
+```
+Run the game:
+```
+[the_island py](./the_island.py)
+```
+
 ## Game description
 The game is heavily inspired by rogue and the CBM64 version of Phantasie II.
 The player reqruits a band of adventures and goes of adventuring on an island.
