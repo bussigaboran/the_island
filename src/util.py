@@ -35,9 +35,11 @@ def dice(combination):
     return result
 
 
-def remove_logfile(filename):
-    try:
-        os.remove(filename)
-    except OSError as e:
-        if e.errno != errno.ENOENT:  # NOT "no such file or directory"
-            raise  # re-raise exception
+def remove_logfile(fname):
+    """ Removes old logfile """
+    if len(fname):
+        if os.path.exists(fname):
+            os.remove(fname)
+            return True
+    logging.debug('Invalid call to remove logfile: %s', fname)
+    return False

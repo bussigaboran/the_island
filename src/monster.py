@@ -20,10 +20,10 @@ class Creature():
         return self.xpos
     def get_pos(self):
         return (self.ypos, self.xpos)
-    def set_player(self):
-        self.player = True
-    def get_player(self):
-        return self.player
+    def set_name(self, name):
+        self.name = name
+    def get_name(self):
+        return self.name
     # def move(self, x, y):
         # if not occupied mem_map[y][x]
         # continue
