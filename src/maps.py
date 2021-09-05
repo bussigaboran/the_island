@@ -18,9 +18,8 @@ def update_creatures(game_data):
         win.addstr(ypos, xpos, creature.get_char())
 
 
-def is_accessible(y, x, game_data):
+def is_accessible(y, x, mem_map):
     """ returns booelan describing accessible area """
-    mem_map = game_data.get_mem_map()
     walkable = ['.', '#', '^', 'O', 'T']
     if y > 24 or x > 79:   # Boundary check
         return False
@@ -61,6 +60,8 @@ def load_map(part, game_data):
                     logging.debug('y = %d, x = %d', y_pos, x_pos)
                     mem_map[y_pos][x_pos].set(column[x_pos])
                 y_pos += 1
+                if y_pos > 25:
+                    matched = False
     game_data.set_mem_map(mem_map)
     f.close()
 

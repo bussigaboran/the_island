@@ -66,24 +66,20 @@ def update_game(key, game_data):
     new_xpos = player.get_xpos()
     if key == 'LEFT':
         new_xpos = new_xpos - 1
-        if src.maps.is_accessible(new_ypos, new_xpos, game_data):
+        if src.maps.is_accessible(new_ypos, new_xpos, game_data.get_mem_map()):
             player.set_xpos(new_xpos)
     if key == 'RIGHT':
         new_xpos = new_xpos + 1
-        if src.maps.is_accessible(new_ypos, new_xpos, game_data):
+        if src.maps.is_accessible(new_ypos, new_xpos, game_data.get_mem_map()):
             player.set_xpos(new_xpos)
     if key == 'DOWN':
         new_ypos = new_ypos + 1
-        if src.maps.is_accessible(new_ypos, new_xpos, game_data):
+        if src.maps.is_accessible(new_ypos, new_xpos, game_data.get_mem_map()):
             player.set_ypos(new_ypos)
     if key == 'UP':
         new_ypos = new_ypos - 1
-        if src.maps.is_accessible(new_ypos, new_xpos, game_data):
+        if src.maps.is_accessible(new_ypos, new_xpos, game_data.get_mem_map()):
             player.set_ypos(new_ypos)
-    if key == 'RIGHT':
-        new_xpos = new_xpos + 1
-        if src.maps.is_accessible(new_ypos, new_xpos, game_data):
-            player.set_xpos(new_xpos)
     win.erase()
     render_all(game_data)
 

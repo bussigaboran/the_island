@@ -31,7 +31,8 @@ class Creature():
 
 def init_player(game_data):
     """ Initialize creature list with player as 1st element """
-    y_pos, x_pos = src.util.random_location(game_data)
+    mem_map = game_data.get_mem_map()
+    y_pos, x_pos = src.util.random_location(mem_map)
     win = game_data.get_win()
     player = src.monster.Creature('player', y_pos, x_pos, '@')
     creatures = []

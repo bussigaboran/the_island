@@ -1,5 +1,6 @@
 import logging
 
+
 class Game():
     def __init__(self):
         self.mem_map = []
