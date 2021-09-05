@@ -7,6 +7,12 @@ Run the game:
 [the_island py](./the_island.py)
 ```
 
+Run the tests:
+```
+coverage run --source '.' -m unittest -v
+coverage report -m
+```
+
 Screenshot of our hero(es) waking amidst the dense woods, slowly approaching
 the mountains in the north. What dwells there?
 ```

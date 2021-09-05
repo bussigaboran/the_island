@@ -1,15 +1,21 @@
 import unittest
 from pathlib import Path
+from src import game
+from src import maps
+from src import monster
 from src import util
 
 
-# class TestRandomLocation(unittest.TestCase):
-#     def SetUp(self):
-#         pass
-#     def test_upper_limits(self):
-#         y_value, x_value = util.random_location()
-#         self.assertLessEqual(y_value, 23)
-#         self.assertLessEqual(x_value, 79)
+class TestRandomLocation(unittest.TestCase):
+    def test_upper_limits(self):
+        mem_map = maps.init_mem_map()
+        game_data = game.Game()
+        game_data.set_mem_map(mem_map)
+        maps.load_map(0, game_data)     # Load map from disk
+        y_pos, x_pos = util.random_location(mem_map)
+        for _ in range(1, 4):
+            self.assertLessEqual(y_pos, 22)
+            self.assertLessEqual(x_pos, 20)
 
 
 class TestDice(unittest.TestCase):
@@ -38,7 +44,3 @@ class TestRemoveLogfile(unittest.TestCase):
         fname = 'remove_testfile_1.txt'
         Path(fname).touch()
         self.assertTrue(util.remove_logfile(fname))
-
-
-
-
